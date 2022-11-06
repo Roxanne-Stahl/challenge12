@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* || RESET */
+*
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FONT-FAMILY: 'Kumbh Sans', sans-serif;
+    --FONT-400: 400;
+    --FONT-700: 700;
+
+    /* COLORS */
+    --DARK-BLUE: hsl(238, 29%, 16%);
+    --RED: hsl(14, 88%, 65%);
+    --DARK-RED: hsl(14, 94%, 26%);
+    --VIOLET: hsl(273, 75%, 66%);
+    --BLUE: hsl(240, 73%, 65%);
+    --DARK-GRAY: hsl(237, 12%, 33%);
+    --MEDIUM-GRAY: hsl(240, 6%, 50%);
+    --LIGHT-GRAY: hsl(240, 5%, 91%);
+}
+/* || GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--FONT-FAMILY);
+    background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    background-repeat: no-repeat;
+} 
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+    border-radius: 23px;
+    place-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}   
+.faq {
+    width: 22rem;
+    height: 32rem;
+    place-self: center;
+    text-align: left;
+    padding-right: 6rem;
+    padding-left: 5rem;
+}
+h2 {
+    font-weight: var(--FONT-700);
+    font-size: 2rem;
+    line-height: 40px;
+    color: var(--DARK-BLUE);
+    text-align: left;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+hr {
+    color: #E8E8EA;
+}
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--FONT-400);
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: var(--DARK-GRAY);
+    width: 22rem;
+    border: none;
+    background-color: #FFFFFF;
+}
+.arrow {
+    place-self: center;
+}
+.accordion:hover {
+    font-weight: var(--FONT-400);
+    font-size: 0.875rem;
+    line-height: 17px;
+    cursor: pointer;
+    color: var(--RED); 
+}
+.accordion:visited {
+    font-weight: 700;
+}
+.active .accordion {
+    font-weight: 700; 
+}
+.panel {
+    font-weight: var(--FONT-400);
+    font-size: 0.75rem;
+    line-height: 18px;
+    color: var(--MEDIUM-GRAY);
+    display: none;
+    overflow: hidden;
+}
+/* || FOOTER */
+
+.attribution { 
+    margin-top: 4rem;
+    font-size: 11px; 
+    text-align: center;
+    color: var(--LIGHT-GRAY);
+}
+.attribution a { 
+    color: lightblue;
+    text-decoration: none; 
+}
+
+/* ||  MEDIA QUERIES   */
+
+@media screen and (max-width: 1007px){
+    .card {
+        display: grid;
+        grid-template: column;
+        margin-top: 9rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        width: 20rem;
+        height: 42rem;       
+        place-self: center;
+    }
+    .image__container {
+        width: 15rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -35%;
+    }
+    .box {
+        display: none;
+    }
+    .illustrations {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .shadows {
+        position: absolute;
+        top: 9rem;
+        z-index: 1;
+    }
+    .faq {
+        width: 18rem;
+        padding: 0;
+        margin-top: 0;
+    }
+    h2 {
+        text-align: center;
+    }
+    .accordion {
+        width: 19rem;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    .card {
+        display: flex;
+        background: #FFFFFF;
+        box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+        border-radius: 23px;
+        width: 58rem;
+        padding-top: 4rem;
+        gap: 5rem;
+        place-self: center;
+        margin-top: 8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image__container{
+        width: 30rem;
+    }
+    .box {
+        position: absolute;
+        transform: translateY(8.5rem) translateX(-5rem);
+        z-index: 2;
+    }
+    .illustrations {
+        position: absolute;
+        transform: translateX(-4rem);
+        z-index: 1;
+    }
+    .shadows {
+        position: absolute;
+        transform: translateX(-35rem) translateY(-20rem);
+        z-index: 3;
+    }
+}
+
